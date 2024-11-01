@@ -74,3 +74,25 @@ Il progetto **ft_printf** richiede la realizzazione di una funzione che replica 
 | **Esempio di Utilizzo**   | All'interno del tuo programma, puoi usare **ft_printf** come la funzione `printf` standard.                                   |
 
 ---
+
+### Example Main
+
+```c
+#include "ft_printf.h"
+
+int main(void) {
+    int num = 42;
+    char *str = "Hello, world!";
+    void *ptr = &num;
+
+    ft_printf("Character: %c\n", 'A');
+    ft_printf("String: %s\n", str);
+    ft_printf("Integer: %d\n", num);
+    ft_printf("Unsigned: %u\n", (unsigned int)num);
+    ft_printf("Hex (lowercase): %x\n", num);
+    ft_printf("Hex (uppercase): %X\n", num);
+    ft_printf("Pointer: %p\n", ptr);
+    ft_printf("Percentage: %%\n");
+
+    return (0);
+}
