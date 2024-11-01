@@ -52,40 +52,25 @@ Il progetto **ft_printf** richiede la realizzazione di una funzione che replica 
 
 ## Compilation and Usage
 
-|------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
-| **Compilation**: Compile the library by running `make`. This will generate the object files (`.o`) that can be linked to other projects. | **Compilation**: Compile the library by running `make`. This will generate the object files (`.o`) that can be linked to other projects. |
-| **Including Header**: Include the `ft_printf.h` file in your source code to access the **ft_printf** function.               | **Including Header**: Include the `ft_printf.h` file in your source code to access the **ft_printf** function. |
-| **Linking**: Compile your project with **ft_printf** by linking the files. For example:                                       | **Linking**: Compile your project with **ft_printf** by linking the files. For example:                           |
-| `gcc your_program.c ft_printf.c ft_putchar.c ft_putstr.c ft_putnbr.c ft_unsigned_putnbr.c ft_hex_putnbr.c ft_meetperc.c -o your_program` | `gcc your_program.c ft_printf.c ft_putchar.c ft_putstr.c ft_putnbr.c ft_unsigned_putnbr.c ft_hex_putnbr.c ft_meetperc.c -o your_program` |
-| **Use in Any Project**: You can use **ft_printf** in any project simply by including `ft_printf.h` and linking the compiled library during compilation. This way, you don't need a specific main function for **ft_printf** inside the library. Include `ft_printf.h` in the source files where you want to use **ft_printf**. | **Use in Any Project**: You can use **ft_printf** in any project simply by including `ft_printf.h` and linking the compiled library during compilation. This way, you don't need a specific main function for **ft_printf** inside the library. Include `ft_printf.h` in the source files where you want to use **ft_printf**. |
-| **Example Usage**: Inside your program, you can use **ft_printf** like the standard `printf`.                                | **Example Usage**: Inside your program, you can use **ft_printf** like the standard `printf`.       |
-| ```c      
+🇬🇧
+| Step                       | Description                                                                                                                  |
+|----------------------------|------------------------------------------------------------------------------------------------------------------------------|
+| **Compilation**            | Compile the library by running `make`. This will generate the object files (`.o`) that can be linked to other projects.      |
+| **Including Header**       | Include the `ft_printf.h` file in your source code to access the **ft_printf** function.                                     |
+| **Linking**                | Compile your project with **ft_printf** by linking the files. For example:<br> `gcc your_program.c ft_printf.c ft_putchar.c ft_putstr.c ft_putnbr.c ft_unsigned_putnbr.c ft_hex_putnbr.c ft_meetperc.c -o your_program` |
+| **Use in Any Project**     | You can use **ft_printf** in any project simply by including `ft_printf.h` and linking the compiled library during compilation. This way, you don't need a specific main function for **ft_printf** inside the library. Include `ft_printf.h` in the source files where you want to use **ft_printf**. |
+| **Example Usage**          | Inside your program, you can use **ft_printf** like the standard `printf`.                                                   |
 
+---
 
-**Compilazione**: Compila la libreria eseguendo `make`. Questo genererà i file oggetto (`.o`) che possono essere collegati ad altri progetti. | **Compilazione**: Compila la libreria eseguendo `make`. Questo genererà i file oggetto (`.o`) che possono essere collegati ad altri progetti. |
-| **Inclusione dell'Header**: Includi il file `ft_printf.h` nel tuo codice sorgente per accedere alla funzione **ft_printf**. | **Inclusione dell'Header**: Includi il file `ft_printf.h` nel tuo codice sorgente per accedere alla funzione **ft_printf**. |
-| **Collegamento**: Compila il tuo progetto insieme a **ft_printf** collegando i file. Ad esempio:                           | **Collegamento**: Compila il tuo progetto insieme a **ft_printf** collegando i file. Ad esempio:                           |
-| `gcc your_program.c ft_printf.c ft_putchar.c ft_putstr.c ft_putnbr.c ft_unsigned_putnbr.c ft_hex_putnbr.c ft_meetperc.c -o your_program` | `gcc your_program.c ft_printf.c ft_putchar.c ft_putstr.c ft_putnbr.c ft_unsigned_putnbr.c ft_hex_putnbr.c ft_meetperc.c -o your_program` |
-| **Utilizzo in Qualsiasi Progetto**: Puoi utilizzare **ft_printf** in qualsiasi progetto semplicemente includendo `ft_printf.h` e collegando la libreria compilata durante la compilazione. In questo modo, non hai bisogno di un `main` specifico per **ft_printf** all'interno della libreria. Includi `ft_printf.h` nei file sorgente del progetto dove vuoi usare **ft_printf**. | **Utilizzo in Qualsiasi Progetto**: Puoi utilizzare **ft_printf** in qualsiasi progetto semplicemente includendo `ft_printf.h` e collegando la libreria compilata durante la compilazione. In questo modo, non hai bisogno di un `main` specifico per **ft_printf** all'interno della libreria. Includi `ft_printf.h` nei file sorgente del progetto dove vuoi usare **ft_printf**. |
-| **Esempio di Utilizzo**: All'interno del tuo programma, puoi usare **ft_printf** come la funzione `printf` standard.       | **Esempio di Utilizzo**: All'interno del tuo programma, puoi usare **ft_printf** come la funzione `printf` standard.       |
-| ```c                 
+🇮🇹 
 
-|
-| #include "ft_printf.h"                                                                                                       | #include "ft_printf.h"                                                                                                     |
-| int main(void) {                                                                                                             | int main(void) {                                                                                                           |
-|     int num = 42;                                                                                                            |     int num = 42;                                                                                                          |
-|     char *str = "Hello, world!";                                                                                             |     char *str = "Hello, world!";                                                                                           |
-|     void *ptr = &num;                                                                                                        |     void *ptr = &num;                                                                                                      |
-|     ft_printf("Character: %c\n", 'A');                                                                                       |     ft_printf("Carattere: %c\n", 'A');                                                                                     |
-|     ft_printf("String: %s\n", str);                                                                                          |     ft_printf("Stringa: %s\n", str);                                                                                       |
-|     ft_printf("Integer: %d\n", num);                                                                                         |     ft_printf("Intero: %d\n", num);                                                                                        |
-|     ft_printf("Unsigned: %u\n", (unsigned int)num);                                                                          |     ft_printf("Senza segno: %u\n", (unsigned int)num);                                                                     |
-|     ft_printf("Hex (lowercase): %x\n", num);                                                                                 |     ft_printf("Esadecimale (minuscolo): %x\n", num);                                                                       |
-|     ft_printf("Hex (uppercase): %X\n", num);                                                                                 |     ft_printf("Esadecimale (maiuscolo): %X\n", num);                                                                       |
-|     ft_printf("Pointer: %p\n", ptr);                                                                                         |     ft_printf("Puntatore: %p\n", ptr);                                                                                     |
-|     ft_printf("Percentage: %%\n");                                                                                           |     ft_printf("Percentuale: %%\n");                                                                                        |
-|     return (0);                                                                                                              |     return (0);                                                                                                            |
-| }                                                                                                                            | }                                                                                                                          |
-| ```                                                                                                                          | ```                                                                                                                        |
+| Passaggio                 | Descrizione                                                                                                                   |
+|---------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| **Compilazione**          | Compila la libreria eseguendo `make`. Questo genererà i file oggetto (`.o`) che possono essere collegati ad altri progetti.   |
+| **Inclusione dell'Header**| Includi il file `ft_printf.h` nel tuo codice sorgente per accedere alla funzione **ft_printf**.                              |
+| **Collegamento**          | Compila il tuo progetto insieme a **ft_printf** collegando i file. Ad esempio:<br> `gcc your_program.c ft_printf.c ft_putchar.c ft_putstr.c ft_putnbr.c ft_unsigned_putnbr.c ft_hex_putnbr.c ft_meetperc.c -o your_program` |
+| **Utilizzo in Qualsiasi Progetto** | Puoi utilizzare **ft_printf** in qualsiasi progetto semplicemente includendo `ft_printf.h` e collegando la libreria compilata durante la compilazione. In questo modo, non hai bisogno di un `main` specifico per **ft_printf** all'interno della libreria. Includi `ft_printf.h` nei file sorgente del progetto dove vuoi usare **ft_printf**. |
+| **Esempio di Utilizzo**   | All'interno del tuo programma, puoi usare **ft_printf** come la funzione `printf` standard.                                   |
 
 ---
